@@ -15,7 +15,7 @@
 <project name="Mind Parent POM">
   <skin>
     <groupId>org.ow2.mind</groupId>
-    <artifactId>maven-skin-mind</artifactId>
+    <artifactId>mind-maven-skin</artifactId>
     <version>0.1</version>
   </skin>
 
