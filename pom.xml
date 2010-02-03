@@ -2,20 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.ow2.mind</groupId>
+    <parent>
+        <groupId>org.ow2.mind</groupId>
+        <artifactId>mind-parent</artifactId>
+        <version>1</version>
+    </parent>
+
     <artifactId>mind-maven-skin</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <name>Custom skin for MIND project</name>
-
-    <properties>
-        <!--
-            The login name on the OW2 Forge (default is local user name, may be
-            overridden on the command line or in settings.xml file).
-        -->
-        <ow2.username>${user.name}</ow2.username>
-        <ow2.hostname>forge.objectweb.org</ow2.hostname>
-    </properties>
 
     <!--
         Original skin from http://embedchat.org com.kobyleha.maven.skins
@@ -23,9 +19,9 @@
     -->
     
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-maven-skin</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-maven-skin</developerConnection>
-        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-maven-skin</url>
+        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-maven-skin-1.0</connection>
+        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-maven-skin-1.0</developerConnection>
+        <url>http://fisheye.ow2.org/browse/mind/maven/tags/mind-maven-skin-1.0</url>
     </scm>
 
     <contributors>
@@ -36,31 +32,4 @@
             <name>Matthieu Leclercq</name>
         </contributor>
     </contributors>
-
-    <distributionManagement>
-        <repository>
-            <id>OW2</id>
-            <name>OW2's release repository</name>
-            <url>scp://${ow2.hostname}/var/lib/gforge/chroot/home/groups/maven/htdocs/maven2/</url>
-        </repository>
-        <snapshotRepository>
-            <id>OW2</id>
-            <name>OW2's snapshot repository</name>
-            <url>scp://${ow2.hostname}/var/lib/gforge/chroot/home/groups/maven/htdocs/maven2-snapshot/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.0-beta-9</version>
-                <configuration>
-                    <!-- The SCM username. -->
-                    <username>${ow2.username}</username>
-                </configuration>
-             </plugin>
-         </plugins>
-    </build>
-
 </project>
