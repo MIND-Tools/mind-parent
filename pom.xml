@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.ow2.mind</groupId>
     <artifactId>mind-maven-skin</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
 
     <name>Custom skin for MIND project</name>
 
@@ -23,9 +24,9 @@
     -->
     
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-maven-skin-0.1</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-maven-skin-0.1</developerConnection>
-        <url>http://fisheye.ow2.org/browse/mind/maven/tags/mind-maven-skin-0.1</url>
+        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent-skin</connection>
+        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent-skin</developerConnection>
+        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-parent-skin</url>
     </scm>
 
     <contributors>
