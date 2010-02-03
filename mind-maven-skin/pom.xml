@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>mind-maven-skin</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
 
     <name>Custom skin for MIND project</name>
 
@@ -19,9 +19,9 @@
     -->
     
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-maven-skin-1.0</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-maven-skin-1.0</developerConnection>
-        <url>http://fisheye.ow2.org/browse/mind/maven/tags/mind-maven-skin-1.0</url>
+        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-maven-skin</connection>
+        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-maven-skin</developerConnection>
+        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-maven-skin</url>
     </scm>
 
     <contributors>
