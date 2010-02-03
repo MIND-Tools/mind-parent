@@ -24,9 +24,9 @@
     -->
     
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent-skin</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent-skin</developerConnection>
-        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-parent-skin</url>
+        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-maven-skin</connection>
+        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-maven-skin</developerConnection>
+        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-maven-skin</url>
     </scm>
 
     <contributors>
