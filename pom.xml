@@ -27,9 +27,9 @@
     </properties>
 
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/parent-pom/trunk</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/parent-pom/trunk</developerConnection>
-        <url>http://fisheye.ow2.org/browse/MIND/parent-pom/trunk</url>
+        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</connection>
+        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</developerConnection>
+        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-parent</url>
     </scm>
 
     <mailingLists>
