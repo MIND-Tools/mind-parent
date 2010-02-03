@@ -300,6 +300,7 @@
 
             <properties>
                 <repository.test.url>file:///tmp/mind/repo</repository.test.url>
+                <site.test.url>file:///tmp/mind/site</site.test.url>
             </properties>
 
             <distributionManagement>
@@ -311,6 +312,11 @@
                     <id>test</id>
                     <url>${repository.test.url}</url>
                 </snapshotRepository>
+                <site>
+                    <id>OW2</id>
+                    <name>MIND OW2's site</name>
+                    <url>${site.test.url}/mind-parent-${project.version}</url>
+        </site>
             </distributionManagement>
         </profile>
     </profiles>
