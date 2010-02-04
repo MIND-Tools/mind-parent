@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.ow2.mind</groupId>
@@ -236,7 +237,7 @@
                 </plugins>
             </reporting>
         </profile>
-        
+
         <!-- Profile used for build performed for continuous-integration -->
         <profile>
             <id>CI-profile</id>
@@ -293,7 +294,7 @@
                 </plugins>
             </build>
         </profile>
-        
+
         <profile>
             <id>test-deploy</id>
 
@@ -315,7 +316,7 @@
                     <id>OW2</id>
                     <name>MIND OW2's site</name>
                     <url>${site.test.url}/mind-parent-${project.version}</url>
-        </site>
+                </site>
             </distributionManagement>
         </profile>
     </profiles>
