@@ -16,6 +16,44 @@
 
     <url>http://mind.ow2.org/mind-parent-${project.version}/</url>
 
+    <issueManagement>
+        <system>jira</system>
+        <url>http://jira.ow2.org/browse/MIND</url>
+    </issueManagement>
+
+    <inceptionYear>2009</inceptionYear>
+
+    <organization>
+        <name>OW2</name>
+        <url>http://ow2.org/</url>
+    </organization>
+
+    <repositories>
+        <repository>
+            <id>OW2-release</id>
+            <name>OW2 Maven Repository</name>
+            <url>http://maven.ow2.org/maven2</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>OW2-snapshot</id>
+            <name>OW2 Maven SNAPSHOT Repository</name>
+            <url>http://maven.ow2.org/maven2-snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <properties>
         <!--
             The login name on the OW2 Forge (default is local user name, may be
@@ -42,6 +80,8 @@
             <post>mind-commit@ow2.org</post>
         </mailingList>
     </mailingLists>
+
+
 
     <distributionManagement>
         <repository>
@@ -219,6 +259,9 @@
                                 </reports>
                             </reportSet>
                         </reportSets>
+                        <configuration>
+                            <targetJdk>1.5</targetJdk>
+                        </configuration>
                     </plugin>
 
                     <!-- source cross reference reports -->
