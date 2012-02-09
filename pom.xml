@@ -2,9 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Inherit from OW2 base maven POM. Required to be able to deploy on 
+        Nexus repository. -->
+    <parent>
+        <groupId>org.ow2</groupId>
+        <artifactId>ow2</artifactId>
+        <version>1.3</version>
+    </parent>
+
     <groupId>org.ow2.mind</groupId>
     <artifactId>mind-parent</artifactId>
-    <version>4-SNAPSHOT</version>
+    <version>4</version>
 
     <packaging>pom</packaging>
     <name>MIND parent POM</name>
@@ -26,6 +34,15 @@
         <name>OW2</name>
         <url>http://ow2.org/</url>
     </organization>
+
+    <developers>
+        <developer>
+            <id>leclercq</id>
+            <name>Matthieu Leclercq</name>
+            <email>matthieu.leclercq@st.com</email>
+            <organization>STMicroelectronics</organization>
+        </developer>
+    </developers>
 
     <repositories>
         <repository>
@@ -54,19 +71,17 @@
     </repositories>
 
     <properties>
-        <!--
-            The login name on the OW2 Forge (default is local user name, may be
-            overridden on the command line or in settings.xml file).
-        -->
+        <!-- The login name on the OW2 Forge (default is local user name, 
+            may be overridden on the command line or in settings.xml file). -->
         <ow2.username>${user.name}</ow2.username>
         <ow2.hostname>forge.objectweb.org</ow2.hostname>
         <ow2.site.deploy.dir>/var/lib/gforge/chroot/home/groups/mind/htdocs</ow2.site.deploy.dir>
     </properties>
 
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</developerConnection>
-        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-parent</url>
+        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-parent-4</connection>
+        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-parent-4</developerConnection>
+        <url>http://fisheye.ow2.org/browse/mind/maven/tags/mind-parent-4</url>
     </scm>
 
     <mailingLists>
@@ -83,16 +98,6 @@
 
 
     <distributionManagement>
-        <repository>
-            <id>OW2</id>
-            <name>OW2's release repository</name>
-            <url>scp://${ow2.hostname}/var/lib/gforge/chroot/home/groups/maven/htdocs/maven2/</url>
-        </repository>
-        <snapshotRepository>
-            <id>OW2</id>
-            <name>OW2's snapshot repository</name>
-            <url>scp://${ow2.hostname}/var/lib/gforge/chroot/home/groups/maven/htdocs/maven2-snapshot/</url>
-        </snapshotRepository>
         <site>
             <id>OW2</id>
             <name>MIND OW2's site</name>
@@ -117,7 +122,6 @@
             <plugins>
                 <plugin>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>2.0-beta-9</version>
                     <configuration>
                         <!-- The SCM username. -->
                         <username>${ow2.username}</username>
@@ -137,15 +141,19 @@
 
                 <!-- Always attach source jar -->
                 <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
+                    <version>2.1.2</version>
+
                     <executions>
                         <execution>
                             <id>attach-sources</id>
                             <goals>
-                                <goal>jar</goal>
+                                <goal>jar-no-fork</goal>
                             </goals>
                         </execution>
                     </executions>
+
                 </plugin>
 
                 <plugin>
@@ -271,8 +279,8 @@
                             <aggregate>true</aggregate>
                             <windowtitle>${project.name} Source code</windowtitle>
                             <doctitle>
-                                ${project.name} ${project.version} Source
-                                code
+                                ${project.name} ${project.version}
+                                Source code
                             </doctitle>
                         </configuration>
                     </plugin>
