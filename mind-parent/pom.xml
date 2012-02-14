@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Inherit from OW2 base maven POM. Required to be able to deploy on 
@@ -13,7 +12,7 @@
 
     <groupId>org.ow2.mind</groupId>
     <artifactId>mind-parent</artifactId>
-    <version>5-SNAPSHOT</version>
+    <version>5</version>
 
     <packaging>pom</packaging>
     <name>MIND parent POM</name>
@@ -80,9 +79,9 @@
     </properties>
 
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</developerConnection>
-        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-parent</url>
+        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-parent-5</connection>
+        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-parent-5</developerConnection>
+        <url>http://fisheye.ow2.org/browse/mind/maven/tags/mind-parent-5</url>
     </scm>
 
     <mailingLists>
