@@ -12,7 +12,7 @@
 
     <groupId>org.ow2.mind</groupId>
     <artifactId>mind-parent</artifactId>
-    <version>6</version>
+    <version>7-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>MIND parent POM</name>
@@ -79,9 +79,9 @@
     </properties>
 
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-parent-6</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/tags/mind-parent-6</developerConnection>
-        <url>http://fisheye.ow2.org/browse/mind/maven/tags/mind-parent-6</url>
+        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</connection>
+        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</developerConnection>
+        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-parent</url>
     </scm>
 
     <mailingLists>
