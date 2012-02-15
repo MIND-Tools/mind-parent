@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <!-- Inherit from OW2 base maven POM. Required to be able to deploy on 
@@ -134,6 +135,8 @@
                         <username>${ow2.username}</username>
 
                         <remoteTagging>false</remoteTagging>
+        
+                        <arguments>-Pow2-release -DmindRelease=true</arguments>
                     </configuration>
                 </plugin>
 
@@ -250,7 +253,7 @@
 
             <activation>
                 <property>
-                    <name>performRelease</name>
+                    <name>mindRelease</name>
                     <value>true</value>
                 </property>
             </activation>
