@@ -16,7 +16,7 @@
   <skin>
     <groupId>org.ow2.mind</groupId>
     <artifactId>mind-maven-skin</artifactId>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
   </skin>
 
   <body>
@@ -30,7 +30,7 @@
       
       <item name="Developers' Corner"  href="http://mind.ow2.org/index.html" >
         <item name="Forge Site" href="http://forge.ow2.org/projects/mind/"/>
-        <item name="SVN Repository" href="http://fisheye.ow2.org/browse/MIND"/>
+        <item name="GitHub Repository" href="http://github.com/MIND-Tools"/>
         <item name="Issues Tracker" href="http://jira.ow2.org/browse/MIND"/>
         <item name="Continuous Integration" href="http://bamboo.ow2.org/browse/MIND"/>
       </item>

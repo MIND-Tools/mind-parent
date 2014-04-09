@@ -37,6 +37,12 @@
 
     <developers>
         <developer>
+            <id>valeriebertin</id>
+            <name>Valerie Bertin</name>
+            <email>valerie.bertin@st.com</email>
+            <organization>STMicroelectronics</organization>
+        </developer>
+        <developer>
             <id>leclercq</id>
             <name>Matthieu Leclercq</name>
             <email>matthieu.leclercq@st.com</email>
@@ -79,9 +85,9 @@
     </properties>
 
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-parent</developerConnection>
-        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-parent</url>
+        <connection>scm:git:https://github.com/MIND-Tools/maven/tree/master/mind-parent</connection>
+        <developerConnection>scm:git:https://github.com/MIND-Tools/maven/tree/master/mind-parent</developerConnection>
+        <url>https://github.com/MIND-Tools/maven/tree/master/mind-parent</url>
     </scm>
 
     <mailingLists>
@@ -110,8 +116,7 @@
             <dependency>
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
-                <classifier>jdk15</classifier>
-                <version>5.8</version>
+                <version>5.14.10</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
@@ -139,12 +144,12 @@
                     </configuration>
                 </plugin>
 
-                <!-- Use Java 1.5 -->
+                <!-- Use Java 1.6 -->
                 <plugin>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <configuration>
-                        <source>1.5</source>
-                        <target>1.5</target>
+                        <source>1.6</source>
+                        <target>1.6</target>
                     </configuration>
                 </plugin>
 
@@ -172,22 +177,22 @@
 
                 <plugin>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>2.2-beta-5</version>
+                    <version>2.3</version>
                 </plugin>
 
                 <!-- Test coverage -->
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>cobertura-maven-plugin</artifactId>
-                    <version>2.3</version>
+                    <version>2.5.1</version>
                 </plugin>
 
                 <!-- quality metrics -->
                 <plugin>
                     <artifactId>maven-pmd-plugin</artifactId>
-                    <version>2.4</version>
+                    <version>2.5</version>
                     <configuration>
-                        <targetJdk>1.5</targetJdk>
+                        <targetJdk>1.6</targetJdk>
                     </configuration>
                 </plugin>
 
@@ -195,27 +200,27 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.6.1</version>
+                    <version>2.8.1</version>
                 </plugin>
 
                 <!-- dependency reports -->
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>jdepend-maven-plugin</artifactId>
-                    <version>2.0-beta-2</version>
+                    <version>2.0</version>
                 </plugin>
 
                 <!-- source metrics -->
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>javancss-maven-plugin</artifactId>
-                    <version>2.0-beta-2</version>
+                    <version>2.0</version>
                 </plugin>
 
                 <plugin>
                     <groupId>com.agilejava.docbkx</groupId>
                     <artifactId>docbkx-maven-plugin</artifactId>
-                    <version>2.0.9</version>
+                    <version>2.0.12</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -263,21 +268,21 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>cobertura-maven-plugin</artifactId>
-                        <version>2.3</version>
+                        <version>2.5.1</version>
                     </plugin>
 
                     <!-- quality metrics -->
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>jdepend-maven-plugin</artifactId>
-                        <version>2.0-beta-2</version>
+                        <version>2.0</version>
                     </plugin>
 
                     <!-- source metrics -->
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>javancss-maven-plugin</artifactId>
-                        <version>2.0-beta-2</version>
+                        <version>2.0</version>
                     </plugin>
 
                     <!-- PMD reports -->
@@ -351,12 +356,17 @@
                             </execution>
                         </executions>
                     </plugin>
+                </plugins>
+            </build>
 
+            <reporting>
+                <plugins>
                     <!-- source metrics -->
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>javancss-maven-plugin</artifactId>
-                        <executions>
+                        <version>2.0</version>
+                        <!--executions>
                             <execution>
                                 <id>javancss-report</id>
                                 <phase>verify</phase>
@@ -364,10 +374,10 @@
                                     <goal>report</goal>
                                 </goals>
                             </execution>
-                        </executions>
+                        </executions-->
                     </plugin>
                 </plugins>
-            </build>
+            </reporting>
         </profile>
 
         <profile>
