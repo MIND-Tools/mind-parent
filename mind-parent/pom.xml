@@ -111,6 +111,19 @@
         </site>
     </distributionManagement>
 
+    <modules>
+        <module>mind-parent-resources</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.ow2.mind</groupId>
+            <artifactId>mind-parent-resources</artifactId>
+            <version>7-SNAPSHOT</version>
+            <classifier>bin</classifier>
+            <type>zip</type>
+        </dependency>
+    </dependencies>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -266,33 +279,13 @@
                                 <artifactItem>
                                     <!-- ${project...} cannot be used here -->
                                     <groupId>org.ow2.mind</groupId>
-                                    <artifactId>mind-parent</artifactId>
+                                    <artifactId>mind-parent-resources</artifactId>
                                     <version>7-SNAPSHOT</version>
                                     <classifier>bin</classifier>
                                     <type>zip</type>
                                     <outputDirectory>${project.build.directory}</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- Following plugins are not inherited to children -->
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <inherited>false</inherited>
-                <executions>
-                    <!-- Generates binary assemblies at package phase. -->
-                    <execution>
-                        <id>bin-packages</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <descriptors>
-                                <descriptor>src/assemble/bin-release.xml</descriptor>
-                            </descriptors>
                         </configuration>
                     </execution>
                 </executions>

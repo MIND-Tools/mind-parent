@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.ow2.mind</groupId>
+    <artifactId>mind-parent-resources</artifactId>
+    <version>7-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+    <name>MIND parent resources</name>
+
+    <description>
+        Resources for parent POM for MIND modules built with maven.
+    </description>
+
+    <build>
+        <plugins>
+            <!-- Following plugins are not inherited to children -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <inherited>false</inherited>
+                <executions>
+                    <!-- Generates binary assemblies at package phase. -->
+                    <execution>
+                        <id>bin-packages</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/assemble/bin-release.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
