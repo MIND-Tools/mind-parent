@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.ow2.mind</groupId>
         <artifactId>mind-parent</artifactId>
-        <version>1</version>
+        <version>7-SNAPSHOT</version>
     </parent>
 
     <artifactId>mind-maven-skin</artifactId>
@@ -19,12 +19,15 @@
     -->
     
     <scm>
-        <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-maven-skin</connection>
-        <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/mind/maven/trunk/mind-maven-skin</developerConnection>
-        <url>http://fisheye.ow2.org/browse/mind/maven/trunk/mind-maven-skin</url>
+        <connection>scm:git:https://github.com/MIND-Tools/maven/tree/master/mind-maven-skin</connection>
+        <developerConnection>scm:git:https://github.com/MIND-Tools/maven/tree/master/mind-maven-skin</developerConnection>
+        <url>https://github.com/MIND-Tools/maven/tree/master/mind-maven-skin</url>
     </scm>
 
     <contributors>
+        <contributor>
+            <name>Valerie Bertin</name>
+        </contributor>
         <contributor>
             <name>Yann Davin</name>
         </contributor>
