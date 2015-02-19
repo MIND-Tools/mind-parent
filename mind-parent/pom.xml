@@ -119,7 +119,7 @@
         <dependency>
             <groupId>org.ow2.mind</groupId>
             <artifactId>mind-parent-resources</artifactId>
-            <version>7-SNAPSHOT</version>
+            <version>1-SNAPSHOT</version>
             <classifier>bin</classifier>
             <type>zip</type>
         </dependency>
@@ -316,7 +316,7 @@
                                     <!-- ${project...} cannot be used here -->
                                     <groupId>org.ow2.mind</groupId>
                                     <artifactId>mind-parent-resources</artifactId>
-                                    <version>7-SNAPSHOT</version>
+                                    <version>1-SNAPSHOT</version>
                                     <classifier>bin</classifier>
                                     <type>zip</type>
                                     <outputDirectory>${project.build.directory}</outputDirectory>

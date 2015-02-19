@@ -4,7 +4,7 @@
 
     <groupId>org.ow2.mind</groupId>
     <artifactId>mind-parent-resources</artifactId>
-    <version>7-SNAPSHOT</version>
+    <version>1-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>MIND parent resources</name>
