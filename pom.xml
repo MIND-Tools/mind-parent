@@ -81,14 +81,14 @@
         <!-- The login name on the OW2 Forge (default is local user name, may be 
             overridden on the command line or in settings.xml file). -->
         <ow2.username>${user.name}</ow2.username>
-        <ow2.hostname>forge.objectweb.org</ow2.hostname>
+        <ow2.hostname>forge.ow2.org</ow2.hostname>
         <ow2.site.deploy.dir>/var/lib/gforge/chroot/home/groups/mind/htdocs</ow2.site.deploy.dir>
     </properties>
 
     <scm>
-        <connection>scm:git:https://github.com/MIND-Tools/maven/tree/master/mind-parent</connection>
-        <developerConnection>scm:git:https://github.com/MIND-Tools/maven/tree/master/mind-parent</developerConnection>
-        <url>https://github.com/MIND-Tools/maven/tree/master/mind-parent</url>
+        <connection>scm:git:https://github.com/MIND-Tools/mind-parent</connection>
+        <developerConnection>scm:git:https://github.com/MIND-Tools/mind-parent</developerConnection>
+        <url>https://github.com/MIND-Tools/mind-parent</url>
     </scm>
 
     <mailingLists>
