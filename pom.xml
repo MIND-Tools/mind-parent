@@ -316,7 +316,8 @@
                                     <!-- ${project...} cannot be used here -->
                                     <groupId>org.ow2.mind</groupId>
                                     <artifactId>mind-parent-resources</artifactId>
-                                    <version>1-SNAPSHOT</version>
+                                    <!-- Update manually before each release:prepare (not working automatically)-->
+                                    <version>1</version>
                                     <classifier>bin</classifier>
                                     <type>zip</type>
                                     <outputDirectory>${project.build.directory}</outputDirectory>
